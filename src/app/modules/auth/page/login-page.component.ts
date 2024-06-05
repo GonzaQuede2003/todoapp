@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-login-page',
-  standalone: true,
-  imports: [],
   templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css'
+  styleUrls: ['./login-page.component.css']
 })
-export class LoginPageComponent {
+
+export class LoginPageComponent implements OnInit {
+
+  loginForm:FormGroup = new FormGroup({});
+
+  constructor() { }
+
+  ngOnInit(): void {
+
+    this.loginForm = new FormGroup(
+      {
+        email: new FormControl(''),
+        password: new FormControl('')
+      }
+    )
+  }
+
+  sendCredentials():void {
+  
+  }
 
 }

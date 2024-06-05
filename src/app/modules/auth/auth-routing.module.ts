@@ -5,7 +5,7 @@ import { LoginPageComponent } from './page/login-page.component';
 const routes: Routes = [
 
   {
-    path: '',
+    path: 'login',
     component: LoginPageComponent
   }
 
@@ -15,4 +15,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class AuthRoutingModule { }
