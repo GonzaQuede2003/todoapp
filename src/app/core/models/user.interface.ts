@@ -6,5 +6,6 @@ export interface UserInterface
   age: number;
   name: string;
   rols: RolInterface[];
+
   status: 'in-progress' | 'completed' | 'wait';
-}
+} 
